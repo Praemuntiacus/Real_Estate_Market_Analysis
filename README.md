@@ -4,7 +4,7 @@
 
 Description: This is my Python project showcasing my skills in data analysis.
 
-- Python script: [analysis.py](Project1/analysis.py)
+- Python script: [[analysis.py](Project1/analysis.py](https://github.com/Praemuntiacus/Roman_Portfolio/blob/main/CROITOR_Roman_1_html_062022.html))
 - Dataset: [data.csv](Project1/data.csv)
 
 ## Project 2: SQL Project
