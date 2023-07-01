@@ -22,5 +22,6 @@ DESCRIPTION: A Tableau visualization project showcasing an in-depth analysis of 
 This is an analytical scheme to organize the questions for analysis. Employed a color-coded system to enhance information structuring.
 
 - Tableau workbook: [Etude sur l'eau potable](https://public.tableau.com/app/profile/roman4891/viz/Croitorwateraccessproject8/STORY)
-- Data source: [FAO](https://www.fao.org/faostat/en/#data) , [World Resource Institute] (https://www.wri.org/aqueduct)https://www.wri.org/aqueduct)
+- Data sources: [FAO](https://www.fao.org/faostat/en/#data), [World Resource Institute](https://www.wri.org/aqueduct)
+
 
