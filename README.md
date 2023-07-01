@@ -14,9 +14,9 @@ Description: A SQL project demonstrating my database management skills.
 - SQL script: [queries.sql](Project2/queries.sql)
 - SQL dump: [database.sql](Project2/database.sql)
 
-## Project 3: Tableau Project
+## Project 3: Analysis of Accessibility to Drinking Water in the World (Tableau)
 
 Description: A Tableau visualization project displaying my data visualization abilities.
 
-- Tableau workbook: [visualization.twb](Project3/visualization.twb)
+- Tableau workbook: [visualization.twb]([Project3/visualization.twb](https://public.tableau.com/app/profile/roman4891/viz/Croitorwateraccessproject8/STORY)https://public.tableau.com/app/profile/roman4891/viz/Croitorwateraccessproject8/STORY)
 - Data source: [data.csv](Project3/data.csv)
