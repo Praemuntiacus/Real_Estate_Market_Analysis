@@ -1,5 +1,5 @@
 # My Portfolio
-
+--------------------------------------------------------------
 ## Project 1: Analysis of World Chicken Market (Python: clustering, PCA, Geopandas)
 
 Description: This is my Python project showcasing my skills in data analysis.
@@ -19,6 +19,9 @@ Description: This is my Python project showcasing my skills in data analysis.
 **apparts_vendus**
 ______________
          31378
+###
+- SQL script: [queries.sql]([Project2/queries.sql](https://github.com/Praemuntiacus/Roman_Portfolio/blob/main/query1.sql))
+
 
 ## Project 3: Analysis of Accessibility to Drinking Water in the World (Tableau)
 
