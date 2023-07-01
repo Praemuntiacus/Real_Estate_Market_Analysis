@@ -1,6 +1,6 @@
 # My Portfolio
 
-## Project 1: Analysis of World Chicken Market (Python)
+## Project 1: Analysis of World Chicken Market (Python: clustering, PCA, Geopandas)
 
 Description: This is my Python project showcasing my skills in data analysis.
 
