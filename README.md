@@ -18,8 +18,10 @@ Description: A SQL project demonstrating my database management skills.
 
 Description: A Tableau visualization project displaying my data visualization abilities.
 
-![Project Image]([images/project_image.jpg](https://github.com/Praemuntiacus/Roman_Portfolio/blob/main/Roman%20CROITOR%20(OpenClassrooms%2C%202022).png))
-This is a analytical scheme to organize the questions for analysis. Employed a color-coded system to enhance information structuring.
+![Project Image](https://github.com/Praemuntiacus/Roman_Portfolio/blob/main/Roman%20CROITOR%20(OpenClassrooms%2C%202022).png)
 
-- Tableau workbook: [Etude sul l'eau potable](https://public.tableau.com/app/profile/roman4891/viz/Croitorwateraccessproject8/STORY)
+This is an analytical scheme to organize the questions for analysis. Employed a color-coded system to enhance information structuring.
+
+- Tableau workbook: [Etude sur l'eau potable](https://public.tableau.com/app/profile/roman4891/viz/Croitorwateraccessproject8/STORY)
 - Data source: [FAO](https://www.fao.org/faostat/en/#data)
+
