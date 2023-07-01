@@ -8,9 +8,11 @@
 
 - SQL dump: [database.sql](Project2/database.sql)
 - **Result**:
+______________
 **apparts_vendus**
 ______________
          31378
+______________
 
 - SQL script: [query2.sql](https://github.com/Praemuntiacus/Real_Estate_Market_Analysis/blob/main/query2.sql)
 
