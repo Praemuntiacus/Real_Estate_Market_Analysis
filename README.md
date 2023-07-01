@@ -6,7 +6,7 @@ Description: This is my Python project showcasing my skills in data analysis.
 
 - Python script: [Code and visualisations](Project1/analysis.py](https://github.com/Praemuntiacus/Roman_Portfolio/blob/main/CROITOR_Roman_1_html_062022.html))
 - Dataset: [data.csv](Project1/data.csv)
-
+---------------------------------------------------------------
 ## Project 2: SQL Project
 
 **DESCRIPTION**: A SQL project analysing the real estate makret in France during 2020.
@@ -15,8 +15,8 @@ Description: This is my Python project showcasing my skills in data analysis.
 **This SQL code retrieves the total number of apartments sold during the first semester of 2020**. The first line (*SELECT COUNT(DatMut) AS apparts_vendus*) selects the count of records from the mutations *DatMut* column and assigns it an alias *apparts_vendus*. The COUNT function is used to count the number of rows that meet the specified conditions. *FROM mutation*: This line specifies the table mutation from which the data will be retrieved. *JOIN immobilier ON immobilier.id = mutation.id"*: here I join the *immobilier* table with the *mutation* table based on the *id* column. This allows accessing additional information about the property being sold, which is stored in the *immobilier* table. *WHERE TypIm = 'Appartement' AND NatMut = 'Vente' AND DatMut BETWEEN '01-01-2020' AND '30-06-2020'*: here I specify the conditions that the records must meet in order to be included in the result.
 - SQL dump: [database.sql](Project2/database.sql)
 * **Result**:
-______________
-apparts_vendus
+  
+**apparts_vendus**
 ______________
          31378
 
