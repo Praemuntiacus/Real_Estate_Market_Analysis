@@ -148,7 +148,20 @@ The query starts with two common table expressions (CTEs), *table1* and *table2*
 
 The WHERE clause filters the result to include only communes where the percentage change is greater than or equal to 20%. The result is ordered in descending order based on the percentage change (taux_evolution).
 
-The query identifies the communes with a significant percentage increase in mutations between two specific quarters and presents the commune name and the corresponding percentage change in descending order.
+The query identifies the communes with a significant percentage increase in mutations between two specific quarters and presents the commune name and the corresponding percentage change in descending order:
+
+| nom_de_commune    -     | taux_evolution |
+|-------------------------|----------------|
+| SAINTE MENEHOULD        | 900            |
+| FERRAY-EN-EVELINES (LE) | 800            |
+| ROUEN                   | 716            |
+| RAMONVILLE ST AGNE      | 700            |
+| ROSCOFF                 | 600            |
+| VERNON                  | 550            |
+| HESGIGNEUL-LES-BETHUNE  | 512            |
+| PLOUGASNOU              | 500            |
+| VOREPPE                 | 450            |
+| VIVIERS                 | 450            |
 
 ________________________________________________________________________________________________
 
@@ -176,7 +189,26 @@ This query retrieves the top 3 communes with the highest average property values
 
 The **ORDER BY val_fon_M DESC** clause sorts the results within each subquery in descending order based on the average property values. The LIMIT 3 clause ensures that only the top 3 communes with the highest average values are returned in each subquery.
 
-The outermost query combines the results of all the subqueries using UNION and orders the combined results by the department code (departements). The query retrieves the top 3 communes with the highest average property values in each of the specified departments and presents the results in ascending order of the department code.
+The outermost query combines the results of all the subqueries using UNION and orders the combined results by the department code (departements). The query retrieves the top 3 communes with the highest average property values in each of the specified departments and presents the results in ascending order of the department code:
+
+
+| val_fon_m | communes                  | departments |
+|-----------|---------------------------|-------------|
+| 710418.08 | VITROLLES                 |     13      |
+| 350952.31 | CHATEAUNEUF-LES-MARTIGUES |     13      |
+| 288783.10 | GRAVESON                  |     13      |
+| 321013.16 | SAINT-QUENTIN-DE-BARON    |     33      |
+| 401427.10 | CADAUJAC                  |     33      |
+| 308410.33 | LEGE-CAP-FERRET           |     33      |
+| 316674.69 | MARQUETTE-LES-LILLE       |     59      |
+| 384581.19 | WATTRELOS                 |     59      |
+| 402124.80 | WASQUEHAL                 |     59      |
+| 418647.66 | SAINT-ANDRE DE LA ROCHE   |      6      |
+| 534390.19 | LA ROQUETTE SUR SIQGNE    |      6      |
+| 518982.24 | ROQUEBRUNE CAP MARTIN     |      6      |
+| 220134.07 | SAINT LAURENT D'AGNY      |     69      |
+| 283191.67 | SATHONAY-CAMP             |     69      |
+| 239600.00 | SAINT-PIERRE-DE-CHANDIEU  |     69      |
 
 ________________________________________________________________________________________
 
