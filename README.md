@@ -112,6 +112,20 @@ The WHERE clause filters the result to include only communes where the percentag
 
 The query identifies the communes with a significant percentage increase in mutations between two specific quarters and presents the commune name and the corresponding percentage change in descending order.
 
+### Percentage difference in price per square meter between a 2 room apartment and a 3 room apartment
+- SQL script: [query8.sql](https://github.com/Praemuntiacus/Real_Estate_Market_Analysis/blob/main/query8.sql)
+
+This query calculates and compares the average price per square meter (**prix_m2**) for apartments with 2 rooms (**NbPiece** = 2) and 3 rooms (**NbPiece** = 3). It also calculates the percentage difference (**prct_dif**) between these two average prices.
+
+The query uses two subqueries (**T2** and **T3**) to calculate the average price per square meter for each room configuration. The subquery **T2** calculates the average price per square meter (**prix_m2_t2**) for apartments with 2 rooms, while the subquery **T3** calculates the average price per square meter (**prix_m2_t3**) for apartments with 3 rooms.
+
+The main query selects the calculated average prices per square meter (**T2.prix_m2_t2** and **T3.prix_m2_t3**) from the subqueries. It also calculates the percentage difference between the average prices using the formula (**(T2.prix_m2_t2 - T3.prix_m2_t3) / T2.prix_m2_t2 * 100)::decimal(6,2)** and aliases it as **prct_dif**.
+
+The query compares the average prices per square meter for apartments with 2 rooms and 3 rooms and calculates the percentage difference between them. The results provide insights into the price variation between these two room configurations.
+
+
+
+
 
 
 # Interprétation des résultats obtenus (FR)
