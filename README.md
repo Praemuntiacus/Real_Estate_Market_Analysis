@@ -10,10 +10,10 @@ The project was carried out during my study at **OpenClassroom** in 2021. The da
 | Column    | Data Type |
 |-----------|-----------|
 | id        | Primary Key |
-| NbPiece   |           |
-| TypIm     |           |
-| ValFon    |           |
-| SrfIm     |           |
+| NbPiece   | INTEGER   |
+| TypIm     | VARCHAR   |
+| ValFon    | INTEGER   |
+| SrfIm     | DECIMAL   |
 | id_com    | Foreign Key (commune.id) |
 | id_dept   | Foreign Key (department.id) |
 
@@ -21,21 +21,23 @@ The project was carried out during my study at **OpenClassroom** in 2021. The da
 | Column    | Data Type |
 |-----------|-----------|
 | id        | Primary Key |
-| NatMut    |           |
-| DatMut    |           |
+| NatMut    | VARCHAR   |
+| DatMut    | DATE      |
+| id_im     | Foreign Key (immobilier.id) |
+| id_com    | Foreign Key (commune.id) |
 
 **Table: commune**
 | Column    | Data Type |
 |-----------|-----------|
 | id        | Primary Key |
-| NomCom    |           |
+| NomCom    | VARCHAR     |
 | id_dept   | Foreign Key (department.id) |
 
 **Table: department**
 | Column    | Data Type |
 |-----------|-----------|
 | id        | Primary Key |
-| CodDept   |           |
+| CodDept   | VARCHAR     |
 
 ______________________________________________________
 
@@ -88,7 +90,20 @@ _________________________________________
 
 The query calculates the average price per square meter (**prix_m2**) for each department (**CodDept**) based on the price (**ValFon**) and surface area (**SrfIm**) data from the *immobilier* table. The join condition *department.id = immobilier.id_dept* ensures that the corresponding records are matched between the department and immobilier tables. The result is grouped by department (GROUP BY department.CodDept), and the AVG function calculates the average valuation per surface area for each department. The ROUND function is used to round the calculated average price per square meter to 2 decimal places. The results are then ordered in descending order of **prix_m2** using the ORDER BY clause. Finally, the LIMIT 10 clause is used to retrieve only the top 10 departments with the highest average price per square meter.
 
-The query provides the top 10 departments with the highest average price per square meter based on the valuation and surface area data from the immobilier table.
+The query provides the top 10 departments with the highest average price per square meter based on the valuation and surface area data from the immobilier table:
+
+| coddept | prix_m2 |
+|---------|---------|
+| 11      | 9166.67 |
+| 17      | 6381.25 |
+| 95      | 6130.43 |
+| 84      | 5872.09 |
+|  9      | 5865.94 |
+|  3      | 5538.46 |
+| 19      | 5238.10 |
+| 71      | 5232.13 |
+|  7      | 5038.46 |
+| 40      | 4888.89 |
 
 ____________________________________________________________________________
 
