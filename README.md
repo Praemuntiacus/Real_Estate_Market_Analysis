@@ -100,5 +100,32 @@ The subsequent WITH clause defines two *subqueries*, **table1** and **table2**, 
 The query provides information about the number of sales in the first and second quarters, as well as the percentage change in sales between the two quarters.
 
 
+### List of municipalities where the number of sales increased by at least 20% between the first and the second quarter of 2020
+- SQL script: [query7.sql](https://github.com/Praemuntiacus/Real_Estate_Market_Analysis/blob/main/query7.sql)
+
+
+This query calculates the percentage change in the number of mutations (property transactions) between two quarters, specifically between January 1, 2020, and March 31, 2020 (first quarter), and between April 1, 2020, and June 30, 2020 (second quarter). It focuses on communes (municipalities) and includes only those where the percentage change in mutations is greater than or equal to 20%.
+
+The query starts with two common table expressions (CTEs), *table1* and *table2*, which calculate the number of mutations (COUNT(DatMut)) for each commune in the respective quarters. The main query then joins *table1* and *table2* based on the commune names (table2.nom_de_commune = table1.nc1). It selects the commune name (**nom_de_commune**) and calculates the percentage change in mutations between the two quarters as **(trim2-trim1)*100/trim1** and aliases it as *taux_evolution*.
+
+The WHERE clause filters the result to include only communes where the percentage change is greater than or equal to 20%. The result is ordered in descending order based on the percentage change (taux_evolution).
+
+The query identifies the communes with a significant percentage increase in mutations between two specific quarters and presents the commune name and the corresponding percentage change in descending order.
+
+
+
+# Interprétation des résultats obtenus (FR)
+
+- Au cours du premier semestre 2020, dans le contexte d’un développement d'une pandémie, on note sur le marché immobilier au niveau national une augmentation des ventes de 3% (*requête 6*). Cette croissance peut hypothétiquement être associée aux attentes anxieuses et pessimistes de la population, avec une démarche visant à protéger son épargne en l'investissant dans l'immobilier, ou à disposer d’un logement en milieu périphérique des zones à forte densité de population.
+- Les appartements de deux et trois pièces, qui n'étaient pas assez spacieux pour une famille avec enfants, étaient particulièrement demandés sur le marché, car constituaient la meilleure option pour investir dans l'immobilier (*requête 2*).
+- Les prix de l'immobilier les plus élevés sont observés dans les départements à climat méditerranéen (Aude, Ariège, Vaucluse, Ardèche) ou atlantique doux (Landes, Charente‐Maritime, Corrèze), ainsi que dans le sud de la Loire (Allier, Saône‐et‐Loire), où il existe de bonnes infrastructures de transport, ainsi que dans le Val‐d'Oise, au nord de Paris (*requête 3*).
+- Au niveau des communes, une augmentation significative (plusieurs fois) des ventes est à noter dans les communes aux infrastructures bien développées, situées à proximité des grandes métropoles, mais en dehors des agglomérations urbaines denses (*requête 7*).
+
+# Interpretation of the obtained results (EN)
+
+- During the first semester of 2020, in the context of a developing pandemic, a 3% increase in real estate sales is observed in the national market (*query 6*). This growth can hypothetically be associated with the anxious and pessimistic expectations of the population, with an approach aimed at protecting their savings by investing in real estate, or having a residence in the outskirts of densely populated areas.
+- Two and three-bedroom apartments, which were not spacious enough for families with children, were particularly in demand in the market as they represented the best option for real estate investment (*query 2*).
+- The highest real estate prices are observed in departments with a Mediterranean climate (Aude, Ariège, Vaucluse, Ardèche) or a mild Atlantic climate (Landes, Charente-Maritime, Corrèze), as well as south of Loire (Allier, Saône-et-Loire), where there are good transportation infrastructures, and in Val-d'Oise, north of Paris (*query 3*).
+- At the municipal level, a significant increase (several times) in sales is notable in municipalities with well-developed infrastructures, located near major metropolitan areas but outside dense urban agglomerations (*query 7*).
 
 
