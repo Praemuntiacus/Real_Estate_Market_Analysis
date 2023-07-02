@@ -2,6 +2,8 @@
 
 ## SQL project analysing the real estate makret in France during 2020
 
+The project was carried out during my study at **OpenClassroom** in 2021. The data comes from [data.gouv.fr](https://www.data.gouv.fr) and contains real estate transactions in France during the first half of 2020. To implement the project, I created a database using **Power Architect** and **PostgreSQL**.
+
 - Here is the structure of database:
   
 **Table: immobilier**
