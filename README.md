@@ -1,5 +1,5 @@
 # Real Estate Market Analysis in France
---------------------------------------------------------------
+
 ## SQL project analysing the real estate makret in France during 2020
 
 - Here is the structure of database:
@@ -35,6 +35,7 @@
 | id        | Primary Key |
 | CodDept   |           |
 
+______________________________________________________
 
 ### The total number of apartments sold during the first semester of 2020
 - SQL script: [query1.sql](https://github.com/Praemuntiacus/Real_Estate_Market_Analysis/blob/main/query1.sql)
@@ -51,6 +52,7 @@ The query calculates and returns the count of apartments (apparts_vendus) that w
 |----------------|
 |   31378        |
 
+__________________________________________________________
 
 ### The proportion of apartment sales based on the number of rooms
 - SQL script: [query2.sql](https://github.com/Praemuntiacus/Real_Estate_Market_Analysis/blob/main/query2.sql)
@@ -80,7 +82,8 @@ The query presents the number of apartments (nombr_appart), grouped by the numbe
 |     9     |         8    |       0      |
 |    10     |         2    |       0      |
 |    11     |         1    |       0      |
-______________________________
+
+_________________________________________
 
 ### The average price per square meter for real estate properties in each department
 - SQL script: [query3.sql](https://github.com/Praemuntiacus/Real_Estate_Market_Analysis/blob/main/query3.sql)
@@ -89,6 +92,7 @@ The query calculates the average price per square meter (**prix_m2**) for each d
 
 The query provides the top 10 departments with the highest average price per square meter based on the valuation and surface area data from the immobilier table.
 
+____________________________________________________________________________
 
 ### The average price per square meter for houses in selected departments
 - SQL script: [query4.sql](https://github.com/Praemuntiacus/Real_Estate_Market_Analysis/blob/main/query4.sql)
@@ -101,6 +105,8 @@ These two subqueries are joined using the JOIN statement, matching records with 
 
 The final result of the query is the average price per square meter (prix_m2_maison_IDF) for houses (TypIm = 'Maison') in the Île-de-France region.
 
+_________________________________________________________________________________________
+
 ### The top 10 most expensive apartments
 - SQL script: [query5.sql](https://github.com/Praemuntiacus/Real_Estate_Market_Analysis/blob/main/query5.sql)
 
@@ -111,6 +117,8 @@ The SELECT statement selects the department code as *departement*, the surface a
 The WHERE clause filters the records to include only apartments (**TypIm** = *'Appartement'*). The ORDER BY clause arranges the result in descending order based on the valuation (**ValFon**), so the apartments with the highest valuations will appear first. The LIMIT 10 clause limits the result to only the top 10 apartments with the highest valuations.
 
 The query retrieves the department code, surface area, and valuation for the top 10 apartments based on their valuation, with the apartments sorted in descending order of valuation.
+
+__________________________________________________________________________________________
 
 ### Rate of change in the number of sales between the first and second quarters of 2020
 - SQL script: [query6.sql](https://github.com/Praemuntiacus/Real_Estate_Market_Analysis/blob/main/query6.sql)
@@ -123,10 +131,10 @@ The subsequent WITH clause defines two *subqueries*, **table1** and **table2**, 
 
 The query provides information about the number of sales in the first and second quarters, as well as the percentage change in sales between the two quarters.
 
+______________________________________________________________________________________
 
 ### List of municipalities where the number of sales increased by at least 20% between the first and the second quarter of 2020
 - SQL script: [query7.sql](https://github.com/Praemuntiacus/Real_Estate_Market_Analysis/blob/main/query7.sql)
-
 
 This query calculates the percentage change in the number of mutations (property transactions) between two quarters, specifically between January 1, 2020, and March 31, 2020 (first quarter), and between April 1, 2020, and June 30, 2020 (second quarter). It focuses on communes (municipalities) and includes only those where the percentage change in mutations is greater than or equal to 20%.
 
@@ -135,6 +143,8 @@ The query starts with two common table expressions (CTEs), *table1* and *table2*
 The WHERE clause filters the result to include only communes where the percentage change is greater than or equal to 20%. The result is ordered in descending order based on the percentage change (taux_evolution).
 
 The query identifies the communes with a significant percentage increase in mutations between two specific quarters and presents the commune name and the corresponding percentage change in descending order.
+
+________________________________________________________________________________________________
 
 ### Percentage difference in price per square meter between a 2 room apartment and a 3 room apartment
 - SQL script: [query8.sql](https://github.com/Praemuntiacus/Real_Estate_Market_Analysis/blob/main/query8.sql)
@@ -147,6 +157,8 @@ The main query selects the calculated average prices per square meter (**T2.prix
 
 The query compares the average prices per square meter for apartments with 2 rooms and 3 rooms and calculates the percentage difference between them. The results provide insights into the price variation between these two room configurations.
 
+___________________________________________________________________________
+
 ###  Average land values for the top 3 municipalities in departments 6, 13, 33, 59 and 69
 - SQL script: [query9.sql](https://github.com/Praemuntiacus/Real_Estate_Market_Analysis/blob/main/query9.sql)
 
@@ -156,6 +168,7 @@ The **ORDER BY val_fon_M DESC** clause sorts the results within each subquery in
 
 The outermost query combines the results of all the subqueries using UNION and orders the combined results by the department code (departements). The query retrieves the top 3 communes with the highest average property values in each of the specified departments and presents the results in ascending order of the department code.
 
+________________________________________________________________________________________
 
 # Interprétation des résultats obtenus (FR)
 
@@ -171,4 +184,4 @@ The outermost query combines the results of all the subqueries using UNION and o
 - The highest real estate prices are observed in departments with a Mediterranean climate (Aude, Ariège, Vaucluse, Ardèche) or a mild Atlantic climate (Landes, Charente-Maritime, Corrèze), as well as south of Loire (Allier, Saône-et-Loire), where there are good transportation infrastructures, and in Val-d'Oise, north of Paris (*query 3*).
 - At the municipal level, a significant increase (several times) in sales is notable in municipalities with well-developed infrastructures, located near major metropolitan areas but outside dense urban agglomerations (*query 7*).
 
-
+__________________________________________________________________________________________________________________________
