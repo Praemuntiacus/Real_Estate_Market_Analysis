@@ -123,9 +123,14 @@ The main query selects the calculated average prices per square meter (**T2.prix
 
 The query compares the average prices per square meter for apartments with 2 rooms and 3 rooms and calculates the percentage difference between them. The results provide insights into the price variation between these two room configurations.
 
+###  Average land values for the top 3 municipalities in departments 6, 13, 33, 59 and 69
+- SQL script: [query9.sql](https://github.com/Praemuntiacus/Real_Estate_Market_Analysis/blob/main/query9.sql)
 
+This query retrieves the top 3 communes with the highest average property values (val_fon_M) in each of the specified departments. It focuses on the departments with the codes '6', '13', '33', '59', and '69'. The query consists of multiple subqueries that use the UNION operator to combine the results. Each subquery retrieves the average property values per commune in a specific department. It performs left joins between the *immobilier*, *commune*, and *department* tables to get the necessary data. Within each subquery, the results are grouped by commune name (**NomCom**) and department code (**CodDept**). The average property values are calculated using AVG(ValFon) and are cast to decimal(8,2).
 
+The **ORDER BY val_fon_M DESC** clause sorts the results within each subquery in descending order based on the average property values. The LIMIT 3 clause ensures that only the top 3 communes with the highest average values are returned in each subquery.
 
+The outermost query combines the results of all the subqueries using UNION and orders the combined results by the department code (departements). The query retrieves the top 3 communes with the highest average property values in each of the specified departments and presents the results in ascending order of the department code.
 
 
 # Interprétation des résultats obtenus (FR)
