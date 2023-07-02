@@ -1,7 +1,40 @@
 # Real Estate Market Analysis in France
 --------------------------------------------------------------
-- SQL dump: [database.sql](Project2/database.sql)
 ## SQL project analysing the real estate makret in France during 2020
+
+- Here is the structure of database:
+  
+**Table: immobilier**
+| Column    | Data Type |
+|-----------|-----------|
+| id        | Primary Key |
+| NbPiece   |           |
+| TypIm     |           |
+| ValFon    |           |
+| SrfIm     |           |
+| id_com    | Foreign Key (commune.id) |
+| id_dept   | Foreign Key (department.id) |
+
+**Table: mutation**
+| Column    | Data Type |
+|-----------|-----------|
+| id        | Primary Key |
+| NatMut    |           |
+| DatMut    |           |
+
+**Table: commune**
+| Column    | Data Type |
+|-----------|-----------|
+| id        | Primary Key |
+| NomCom    |           |
+| id_dept   | Foreign Key (department.id) |
+
+**Table: department**
+| Column    | Data Type |
+|-----------|-----------|
+| id        | Primary Key |
+| CodDept   |           |
+
 
 ### The total number of apartments sold during the first semester of 2020
 - SQL script: [query1.sql](https://github.com/Praemuntiacus/Real_Estate_Market_Analysis/blob/main/query1.sql)
