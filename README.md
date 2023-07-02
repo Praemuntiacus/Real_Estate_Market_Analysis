@@ -64,26 +64,22 @@ The WHERE clause filters the records to include only apartments (**TypIm** = *'A
 
 The query presents the number of apartments (nombr_appart), grouped by the number of rooms (pieces), and also provides the percentage of apartments (prsnt_appart) for each number of rooms. The results are ordered based on the number of rooms.
 
+**Result**:
 
-
-
-
-- **Result**:
-________________________
-**pieces** | **apparts**
-
-     0       30
-     1     6739
-     2     9783
-     3     8966
-     4     4460
-     5     1114
-     6      204
-     7       54
-     8       17
-     9        8
-    10        2
-    11        1
+| pieces    | nombr_appart | prsnt_appart |
+|-----------|--------------|--------------|
+|    0      |        30    |       0      |
+|     1     |      6739    |      21      |
+|     2     |      9783    |      31      |
+|     3     |      8966    |      28      |
+|     4     |      4460    |      14      |
+|     5     |      1114    |       3      |
+|     6     |       204    |       0      |
+|     7     |        54    |       0      |
+|     8     |        17    |       0      |
+|     9     |         8    |       0      |
+|    10     |         2    |       0      |
+|    11     |         1    |       0      |
 ______________________________
 
 ### The average price per square meter for real estate properties in each department
