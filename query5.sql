@@ -1,6 +1,6 @@
-﻿SELECT CodDept as departement, SrfIm as surface_appart, ValFon as prix
+SELECT department.CodDept AS departement, immobilier.SrfIm AS surface_appart, immobilier.ValFon AS prix
 FROM immobilier
-JOIN department ON department.id = immobilier.id
-WHERE TypIm = 'Appartement'
-ORDER BY ValFon DESC
+JOIN department ON department.id = immobilier.id_dept
+WHERE immobilier.TypIm = 'Appartement'
+ORDER BY immobilier.ValFon DESC
 LIMIT 10;
