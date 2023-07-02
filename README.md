@@ -6,10 +6,16 @@
 ### The total number of apartments sold during the first semester of 2020
 - SQL script: [query1.sql](https://github.com/Praemuntiacus/Real_Estate_Market_Analysis/blob/main/query1.sql)
 
-- The first line (*SELECT COUNT(DatMut) AS apparts_vendus*) selects the count of records from the mutations *DatMut* column and assigns it an alias *apparts_vendus*. The COUNT function is used to count the number of rows that meet the specified conditions.
-- *FROM mutation*: This line specifies the table mutation from which the data will be retrieved.
-- *JOIN immobilier ON immobilier.id = mutation.id"*: here I join the *immobilier* table with the *mutation* table based on the *id* column. This allows accessing additional information about the property being sold, which is stored in the *immobilier* table.
-- *WHERE TypIm = 'Appartement' AND NatMut = 'Vente' AND DatMut BETWEEN '01-01-2020' AND '30-06-2020'*: here I specify the conditions that the records must meet in order to be included in the result.
+The query counts the number of apartments (**apparts_vendus**) that were sold (**NatMut** = *'Vente'*) within a specific date range (DatMut BETWEEN '2020-01-01' AND '2020-06-30'). The SELECT statement uses the COUNT function to count the occurrences of *immobilier.id* and aliases it as *apparts_vendus*.
+
+The query joins the *immobilier* table with the *mutation* table using a left join (LEFT JOIN) with the join condition *mutation.id = immobilier.id*. The WHERE clause filters the records to include only apartments (**TypIm** = *'Appartement'*), sales transactions (**NatMut** = *'Vente'*), and a specific date range (DatMut BETWEEN '2020-01-01' AND '2020-06-30').
+
+The query calculates and returns the count of apartments (apparts_vendus) that were sold within the specified date range.
+
+
+
+
+
 
 - **Result**:
 ______________
