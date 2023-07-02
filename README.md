@@ -76,3 +76,16 @@ The query uses two subqueries (*tab1* and *tab2*) to calculate the necessary agg
 These two subqueries are joined using the JOIN statement, matching records with the same TypIm (house type). The result is a single row for each house type, with the average price per square meter calculated by dividing the total price by the total surface area, rounded to 2 decimal places.
 
 The final result of the query is the average price per square meter (prix_m2_maison_IDF) for houses (TypIm = 'Maison') in the Île-de-France region.
+
+### The top 10 most expensive apartments
+- SQL script: [query5.sql](https://github.com/Praemuntiacus/Real_Estate_Market_Analysis/blob/main/query5.sql)
+
+The query retrieves information about the top 10 apartments (**Appartement**) based on their valuation (**ValFon**), including the department code (**CodDept**) and the surface area (**SrfIm**) of each apartment.
+
+The SELECT statement selects the department code as *departement*, the surface area as *surface_appart*, and the price as *prix*. The query performs an INNER JOIN between the *immobilier* and *department* tables using the foreign key relationship (department.id = immobilier.id_dept) to match the records based on the department.
+
+The WHERE clause filters the records to include only apartments (**TypIm** = *'Appartement'*). The ORDER BY clause arranges the result in descending order based on the valuation (**ValFon**), so the apartments with the highest valuations will appear first. The LIMIT 10 clause limits the result to only the top 10 apartments with the highest valuations.
+
+The query retrieves the department code, surface area, and valuation for the top 10 apartments based on their valuation, with the apartments sorted in descending order of valuation.
+
+
