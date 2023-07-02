@@ -103,7 +103,13 @@ The query uses two subqueries (*tab1* and *tab2*) to calculate the necessary agg
 
 These two subqueries are joined using the JOIN statement, matching records with the same TypIm (house type). The result is a single row for each house type, with the average price per square meter calculated by dividing the total price by the total surface area, rounded to 2 decimal places.
 
-The final result of the query is the average price per square meter (prix_m2_maison_IDF) for houses (TypIm = 'Maison') in the Île-de-France region.
+The final result of the query is the average price per square meter (**prix_m2_maison_IDF**) for houses (TypIm = 'Maison') in the Île-de-France region:
+
+**Result**:
+
+| prix_m2_maison_IDF |
+|--------------------|
+|     3904.07        |
 
 _________________________________________________________________________________________
 
@@ -129,7 +135,11 @@ The first two SUM(CASE ... END) expressions calculate the number of sales (1) th
 
 The subsequent WITH clause defines two *subqueries*, **table1** and **table2**, which calculate the number of sales (COUNT(DatMut)) within the respective date ranges for the first and second quarters. The last query retrieves the difference in the number of sales between the second and first quarters (**trim2 - trim1**), calculates the percentage change (**(trim2 - trim1) * 100 / trim1**), and aliases it as *taux_evolution*.
 
-The query provides information about the number of sales in the first and second quarters, as well as the percentage change in sales between the two quarters.
+The query provides information about the number of sales in the first and second quarters, as well as the percentage change in sales between the two quarters:
+
+| trimestre1 | trimestre2 | taux_evolution |
+|------------|------------|----------------|
+| 16776      | 17393      | 3              |
 
 ______________________________________________________________________________________
 
@@ -155,7 +165,11 @@ The query uses two subqueries (**T2** and **T3**) to calculate the average price
 
 The main query selects the calculated average prices per square meter (**T2.prix_m2_t2** and **T3.prix_m2_t3**) from the subqueries. It also calculates the percentage difference between the average prices using the formula (**(T2.prix_m2_t2 - T3.prix_m2_t3) / T2.prix_m2_t2 * 100)::decimal(6,2)** and aliases it as **prct_dif**.
 
-The query compares the average prices per square meter for apartments with 2 rooms and 3 rooms and calculates the percentage difference between them. The results provide insights into the price variation between these two room configurations.
+The query compares the average prices per square meter for apartments with 2 rooms and 3 rooms and calculates the percentage difference between them. The results provide insights into the price variation between these two room configurations:
+
+| prix_m2_t2 | prix_m2_t3 | prct_dif |
+|------------|------------|----------|
+| 4763.41    | 4228.27    | 11.23    |
 
 ___________________________________________________________________________
 
