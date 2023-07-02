@@ -44,9 +44,7 @@ The query counts the number of apartments (**apparts_vendus**) that were sold (*
 
 The query joins the *immobilier* table with the *mutation* table using a left join (LEFT JOIN) with the join condition *mutation.id = immobilier.id*. The WHERE clause filters the records to include only apartments (**TypIm** = *'Appartement'*), sales transactions (**NatMut** = *'Vente'*), and a specific date range (DatMut BETWEEN '2020-01-01' AND '2020-06-30').
 
-The query calculates and returns the count of apartments (apparts_vendus) that were sold within the specified date range.
-
-**Result**:
+The query calculates and returns the count of apartments (apparts_vendus) that were sold within the specified date range:
 
 | apparts_vendus |
 |----------------|
@@ -64,9 +62,7 @@ The expression (COUNT(NbPiece) * 100 / (SELECT COUNT(id) FROM immobilier WHERE T
 
 The WHERE clause filters the records to include only apartments (**TypIm** = *'Appartement'*). The GROUP BY clause groups the result by the number of rooms (**NbPiece**). The ORDER BY clause orders the result by the number of rooms (**NbPiece**).
 
-The query presents the number of apartments (nombr_appart), grouped by the number of rooms (pieces), and also provides the percentage of apartments (prsnt_appart) for each number of rooms. The results are ordered based on the number of rooms.
-
-**Result**:
+The query presents the number of apartments (nombr_appart), grouped by the number of rooms (pieces), and also provides the percentage of apartments (prsnt_appart) for each number of rooms. The results are ordered based on the number of rooms:
 
 | pieces    | nombr_appart | prsnt_appart |
 |-----------|--------------|--------------|
@@ -104,8 +100,6 @@ The query uses two subqueries (*tab1* and *tab2*) to calculate the necessary agg
 These two subqueries are joined using the JOIN statement, matching records with the same TypIm (house type). The result is a single row for each house type, with the average price per square meter calculated by dividing the total price by the total surface area, rounded to 2 decimal places.
 
 The final result of the query is the average price per square meter (**prix_m2_maison_IDF**) for houses (TypIm = 'Maison') in the Île-de-France region:
-
-**Result**:
 
 | prix_m2_maison_IDF |
 |--------------------|
