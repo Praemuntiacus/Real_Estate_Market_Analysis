@@ -118,7 +118,21 @@ The SELECT statement selects the department code as *departement*, the surface a
 
 The WHERE clause filters the records to include only apartments (**TypIm** = *'Appartement'*). The ORDER BY clause arranges the result in descending order based on the valuation (**ValFon**), so the apartments with the highest valuations will appear first. The LIMIT 10 clause limits the result to only the top 10 apartments with the highest valuations.
 
-The query retrieves the department code, surface area, and valuation for the top 10 apartments based on their valuation, with the apartments sorted in descending order of valuation.
+The query retrieves the department code, surface area, and valuation for the top 10 apartments based on their valuation, with the apartments sorted in descending order of valuation:
+
+| appartment_id | surface_appart            | prix    | department |
+|---------------|---------------------------|---------|------------|
+|   3           | VITROLLES                 | 720000  |     3      |
+|   87          | CHATEAUNEUF-LES-MARTIGUES | 640000  |    91      |
+|   57          | GRAVESON                  | 580450  |    58      |
+|   16          | SAINT-QUENTIN-DE-BARON    | 561550  |    17      |
+|   30          | CADAUJAC                  | 486415  |    30      |
+|   44          | LEGE-CAP-FERRET           | 475150  |    44      |
+|   68          | MARQUETTE-LES-LILLE       | 465660  |    71      |
+|   17          | WATTRELOS                 | 358000  |    18      |
+|   60          | WASQUEHAL                 | 352300  |    61      |
+|   50          | SAINT-ANDRE DE LA ROCHE   | 332500  |    50      |
+
 
 __________________________________________________________________________________________
 
@@ -150,7 +164,7 @@ The WHERE clause filters the result to include only communes where the percentag
 
 The query identifies the communes with a significant percentage increase in mutations between two specific quarters and presents the commune name and the corresponding percentage change in descending order:
 
-| nom_de_commune    -     | taux_evolution |
+| nom_de_commune          | taux_evolution |
 |-------------------------|----------------|
 | SAINTE MENEHOULD        | 900            |
 | FERRAY-EN-EVELINES (LE) | 800            |
