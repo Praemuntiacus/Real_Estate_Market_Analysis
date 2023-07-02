@@ -47,11 +47,9 @@ ______________________________
 ### The average price per square meter for real estate properties in each department
 - SQL script: [query3.sql](https://github.com/Praemuntiacus/Real_Estate_Market_Analysis/blob/main/query3.sql)
 
-- *SELECT CodDept, AVG(ValFon/SrfIm)::decimal(6,2) AS prix_m2*: I select two columns from the result set. The first column is *CodDept* from the *immobilier* table (department code). The second column is the average price per square meter (AVG(ValFon/SrfIm)) calculated by dividing the value of the property (ValFon) by its surface area (SrfIm). The *::decimal(6,2)* syntax specifies that the result should be cast as a decimal number with 6 total digits including 2 decimal places. It is assigned the alias *prix_m2*.
-- *FROM immobilier* - the immobilier table from which the data will be retrieved.
-- *JOIN department ON department.id = immobilier.id* - the join of the *department* table with the *immobilier* table based on the *id* column. This allows accessing the department information for each property.
-- *GROUP BY department.CodDept*: I group the result set by the *CodDept* column of the *department* table to calculate the average price per square meter for each department.
-- *ORDER BY prix_m2 DESC*: to order the result set in descending order based on the *prix_m2* column. The departments with the highest average price per square meter will appear first. *LIMIT 10*: to limit the result set to only include the top 10 departments with the highest average price per square meter.
+The query calculates the average price per square meter (**prix_m2**) for each department (**CodDept**) based on the price (**ValFon**) and surface area (**SrfIm**) data from the *immobilier* table. The join condition *department.id = immobilier.id_dept* ensures that the corresponding records are matched between the department and immobilier tables. The result is grouped by department (GROUP BY department.CodDept), and the AVG function calculates the average valuation per surface area for each department. The ROUND function is used to round the calculated average price per square meter to 2 decimal places. The results are then ordered in descending order of **prix_m2** using the ORDER BY clause. Finally, the LIMIT 10 clause is used to retrieve only the top 10 departments with the highest average price per square meter.
+
+The query provides the top 10 departments with the highest average price per square meter based on the valuation and surface area data from the immobilier table.
 
 
 ### The average price per square meter for houses in selected departments
