@@ -22,10 +22,18 @@ ______________
 - SQL script: [query2.sql](https://github.com/Praemuntiacus/Real_Estate_Market_Analysis/blob/main/query2.sql)
 
 
-- *SELECT NbPiece AS pieces, COUNT(NbPiece) as apparts*: here I select two columns from the *immobilier* table. The first column is *NbPiece*, which represents the number of rooms in an apartment. The second column is the count of *NbPiece*, which represents the number of apartments with a specific number of rooms. It is given the alias *apparts*.
-- *FROM immobilier*: here I specify the *immobilier* table from which the data will be retrieved. *WHERE TypIm = 'Appartement'*: specification of a condition to filter the records.
-- *GROUP BY NbPiece*: here I group the records based on the *NbPiece* column, i.e. the result will be grouped by the number of rooms in an apartment.
-- *ORDER BY NbPiece*: here I put in order the result in ascending order based on the *NbPiece* column.
+The query provides information about the number of sold apartments grouped by the number of rooms (**NbPiece**). The SELECT statement retrieves the **NbPiece** column as pieces and counts the occurrences of each **NbPiece** value using COUNT(NbPiece) as **nombr_appart**.
+
+The expression (COUNT(NbPiece) * 100 / (SELECT COUNT(id) FROM immobilier WHERE TypIm = 'Appartement')) calculates the percentage of apartments (**prsnt_appart**) for each number of rooms (NbPiece). It divides the count of apartments for a specific number of rooms by the total count of apartments, obtained from a subquery.
+
+The WHERE clause filters the records to include only apartments (**TypIm** = *'Appartement'*). The GROUP BY clause groups the result by the number of rooms (**NbPiece**). The ORDER BY clause orders the result by the number of rooms (**NbPiece**).
+
+The query presents the number of apartments (nombr_appart), grouped by the number of rooms (pieces), and also provides the percentage of apartments (prsnt_appart) for each number of rooms. The results are ordered based on the number of rooms.
+
+
+
+
+
 - **Result**:
 ________________________
 **pieces** | **apparts**
