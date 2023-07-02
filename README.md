@@ -88,4 +88,17 @@ The WHERE clause filters the records to include only apartments (**TypIm** = *'A
 
 The query retrieves the department code, surface area, and valuation for the top 10 apartments based on their valuation, with the apartments sorted in descending order of valuation.
 
+### Rate of change in the number of sales between the first and second quarters of 2020
+- SQL script: [query6.sql](https://github.com/Praemuntiacus/Real_Estate_Market_Analysis/blob/main/query6.sql)
+
+This query calculates various statistics related to property sales (**NatMut** = *'Vente'*) during two selected quarters of the year.
+
+The first two SUM(CASE ... END) expressions calculate the number of sales (1) that occurred within the specified date ranges for the first quarter (**trimestre1**) and the second quarter (**trimestre2**).
+
+The subsequent WITH clause defines two *subqueries*, **table1** and **table2**, which calculate the number of sales (COUNT(DatMut)) within the respective date ranges for the first and second quarters. The last query retrieves the difference in the number of sales between the second and first quarters (**trim2 - trim1**), calculates the percentage change (**(trim2 - trim1) * 100 / trim1**), and aliases it as *taux_evolution*.
+
+The query provides information about the number of sales in the first and second quarters, as well as the percentage change in sales between the two quarters.
+
+
+
 
