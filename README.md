@@ -45,17 +45,12 @@ The query joins the *immobilier* table with the *mutation* table using a left jo
 
 The query calculates and returns the count of apartments (apparts_vendus) that were sold within the specified date range.
 
+**Result**:
 
+| apparts_vendus |
+|----------------|
+|   31378        |
 
-
-
-
-- **Result**:
-______________
-**apparts_vendus**
-
-         31378
-______________
 
 ### The proportion of apartment sales based on the number of rooms
 - SQL script: [query2.sql](https://github.com/Praemuntiacus/Real_Estate_Market_Analysis/blob/main/query2.sql)
