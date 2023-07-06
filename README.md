@@ -241,7 +241,7 @@ The outermost query combines the results of all the subqueries using UNION and o
 
 ________________________________________________________________________________________
 
-https://user-images.githubusercontent.com/125415799/250949983-ab739c25-fca3-4888-abce-b1bd5f80c8d9.png
+![image](https://user-images.githubusercontent.com/125415799/250949983-ab739c25-fca3-4888-abce-b1bd5f80c8d9.png)
 # Interprétation des résultats obtenus
 
 - Au cours du premier semestre 2020, dans le contexte d’un développement d'une pandémie, on note sur le marché immobilier au niveau national une augmentation des ventes de 3% (*requête 6*). Cette croissance peut hypothétiquement être associée aux attentes anxieuses et pessimistes de la population, avec une démarche visant à protéger son épargne en l'investissant dans l'immobilier, ou à disposer d’un logement en milieu périphérique des zones à forte densité de population.
@@ -249,7 +249,7 @@ https://user-images.githubusercontent.com/125415799/250949983-ab739c25-fca3-4888
 - Les prix de l'immobilier les plus élevés sont observés dans les départements à climat méditerranéen (Aude, Ariège, Vaucluse, Ardèche) ou atlantique doux (Landes, Charente‐Maritime, Corrèze), ainsi que dans le sud de la Loire (Allier, Saône‐et‐Loire), où il existe de bonnes infrastructures de transport, ainsi que dans le Val‐d'Oise, au nord de Paris (*requête 3*).
 - Au niveau des communes, une augmentation significative (plusieurs fois) des ventes est à noter dans les communes aux infrastructures bien développées, situées à proximité des grandes métropoles, mais en dehors des agglomérations urbaines denses (*requête 7*).
 
-https://user-images.githubusercontent.com/125415799/250949859-2a1d2422-cab4-4d99-b737-ca419fd85372.png
+![image](https://user-images.githubusercontent.com/125415799/250949859-2a1d2422-cab4-4d99-b737-ca419fd85372.png)
 # Interpretation of the obtained results
 
 - During the first semester of 2020, in the context of a developing pandemic, a 3% increase in real estate sales is observed in the national market (*query 6*). This growth can hypothetically be associated with the anxious and pessimistic expectations of the population, with an approach aimed at protecting their savings by investing in real estate, or having a residence in the outskirts of densely populated areas.
